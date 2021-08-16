@@ -1,0 +1,130 @@
+@font-face {
+  src: url(./fonts/Double_Bubble_shadow.otf);
+  font-family: dbub;
+}
+
+@font-face {
+  src: url(./fonts/Double_Bubble_shadow_italic.otf);
+  font-family: dbub_i;
+}
+
+body {
+  background-image: url(./images/dot-game-bg.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-score-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dot-app {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+#dot-app #top_nav {
+  background-image: linear-gradient(45deg, #000000, #3a3a3a);
+  color: #ffffff;
+  opacity: 0.9;
+  overflow: hidden;
+  padding: 20px 20px 0 20px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+#dot-app #top_nav #score {
+  font-family: dbub_i;
+  font-size: 2.4rem;
+  text-align: center;
+  flex: 1;
+  padding-right: 5%;
+}
+#dot-app #top_nav #game-btn {
+  outline: 0;
+  transition: all 0.5s ease;
+  border: 3px solid rgb(255, 255, 255);
+  width: 20%;
+  padding: 20px 16px;
+  background-image: linear-gradient(180deg, #f9e086, #f9c300);
+  border-radius: 8px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 800;
+  letter-spacing: 8px;
+  font-family: dbub;
+  min-width: 280px;
+}
+#dot-app #top_nav #game-btn:hover {
+  cursor: pointer;
+}
+#dot-app #top_nav #game-btn.start {
+  background-image: linear-gradient(45deg, #1eff00, #082e00);
+}
+#dot-app #top_nav #game-btn.start:hover {
+  color: rgb(255, 255, 255);
+}
+#dot-app #top_nav #game-btn.pause {
+  background-image: linear-gradient(45deg, #1f0000, #ff0000);
+}
+#dot-app #top_nav #game-btn.pause:hover {
+  color: rgb(255, 255, 255);
+}
+#dot-app #top_nav #slider {
+  width: calc(100% - 20px);
+  font-family: dbub_i;
+  font-size: 1.7rem;
+  padding: 10px;
+}
+#dot-app #top_nav #slider input {
+  width: 100%;
+  font-size: 14px;
+}
+#dot-app #main_game {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+#dot-app #main_game .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  opacity: 0.9;
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+#dot-app #main_game .dot:hover {
+  opacity: 1;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 6px rgb(255, 255, 255);
+  transition: ease 0.1s;
+}
+
+.paused {
+  background-image: linear-gradient(358deg, #ffffff, #000000) !important;
+  background-size: 400% 400%;
+  animation: blinking 2s ease infinite;
+}
+
+@keyframes blinking {
+  0% {background-position: 51% 0%;}
+  50% {background-position: 50% 100%;}
+  100% {background-position: 51% 0%;}
+}

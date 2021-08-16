@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Dot Game</title>
+    <link rel="shortcut icon" type="image/jpg" href="Favicon_Image_Location"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Limelight"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    <div id="dot-app">
+      <div id="top_nav">
+        <div class="wrapper-score-button">
+          <div id="score"></div>
+          <button id="game-btn" class="start">Start</button>
+        </div>
+        <div id="slider">
+          <input id="speed" type="range" min="10" max="100" value="1" />
+          <div id="speed-label"></div>
+        </div>
+      </div>
+      <div id="main_game"></div>
+    </div>
+  </body>
+  <script defer src="app.js"></script>
+</html>
